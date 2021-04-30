@@ -50,7 +50,7 @@ function App() {
       )
         .then(response => {
           //console.log(response.data.results);
-          setPokemons(response);
+          setPokemons(response.data);
           setSearchInput('');
           console.log(response.config.url);
           setShowAllPokemon(false);
@@ -143,10 +143,10 @@ function App() {
                       <Image
                         boxSize="75px"
                         src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png"
-                        alt={pokemons.data.name}
+                        alt={pokemons.name}
                       />
                       <ListItem key="allPokemon.id">
-                        {pokemons.data.id}. {pokemons.data.name}
+                        {pokemons.id}. {pokemons.name}
                       </ListItem>
                     </Flex>
                   </UnorderedList>
@@ -159,7 +159,7 @@ function App() {
                           <Flex flexDirection="column" alignItems="center">
                             <Image
                               boxSize="75px"
-                              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png"
+                              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/249.png"
                               // https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/
                               alt={allPokemon.name}
                             />
