@@ -1,0 +1,13 @@
+button,
+input {
+  outline: none !important;
+}
+:focus {
+  outline: 0 !important;
+}
+h2 {
+  color: #a53333;
+}
+ul {
+  list-style-type: none !important;
+}
